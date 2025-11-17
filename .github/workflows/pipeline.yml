@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install Dependencies
         run: pip install -r mlops/requirements.txt
+        - name: Verify packages installed
+          run: pip list
       - name: Upload Dataset to Hugging Face Hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
