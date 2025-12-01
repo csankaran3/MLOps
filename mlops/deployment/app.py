@@ -23,7 +23,7 @@ numeric_features = [
     'NumberOfFollowups',      # Total number of follow-ups by the salesperson after the sales pitch.
     'PreferredPropertyStar',  # Preferred hotel rating by the customer.
     'NumberOfTrips',          # Average number of trips the customer takes annually.
-    'NumberOfTrips'                # Whether the customer holds a valid passport (0: No, 1: Yes).
+    'NumberOfTrips',                # Whether the customer holds a valid passport (0: No, 1: Yes).
     'PitchSatisfactionScore', # Score indicating the customer's satisfaction with the sales pitch.
     'OwnCar',                 # Whether the customer owns a car (0: No, 1: Yes).
     'NumberOfChildrenVisiting', # Number of children below age 5 accompanying the customer.
