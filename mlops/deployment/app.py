@@ -95,7 +95,7 @@ input_data = pd.DataFrame([{
         'DurationOfPitch': DurationOfPitch
 }])
 
-print(pd.DataFrame(input_data)
+print(pd.DataFrame(input_data))
 
 # Set the classification threshold
 classification_threshold = 0.45
