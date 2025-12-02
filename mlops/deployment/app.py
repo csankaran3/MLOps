@@ -51,10 +51,10 @@ with col1:
         NumberOfTrips = st.number_input("Number of Trips", min_value=1, max_value=10, value=1)
         Passport = st.selectbox("Holding Passport?", options=["Yes", "No"], index=0)
         OwnCar = st.selectbox("Owns a Car?", options=["Yes", "No"], index=0)
+    
+with col2:
         NumberOfChildrenVisiting = st.number_input("Number of Children Visiting", min_value=0, max_value=10, value=0)
         MonthlyIncome = st.number_input("Monthly Income", min_value=0.0, value=5000.0)
-
-with col2:
         TypeofContact = st.selectbox("TypeofContact", options=["Company Invited", "Self Enquiry"], index=0)
         Occupation = st.selectbox("Occupation", options=["Salaried", "Small Business", "Large Business", "Freelancer"], index=0)
         Gender = st.selectbox("Gender", options=["Male", "Female"], index=1)
@@ -77,22 +77,22 @@ with col4:
 input_data = pd.DataFrame([{
         'Age': Age,
         'CityTier': CityTier,
+        'DurationOfPitch': DurationOfPitch,
         'NumberofPersonVisiting': NumberOfPersonVisiting,
+        'NumberOfFollowups': NumberOfFollowups,
         'PreferredPropertyStar': PreferredPropertyStar,
         'NumberOfTrips': NumberOfTrips,
         'Passport': 1 if Passport == "Yes" else 0,
+        'PitchSatisfactionScore': PitchSatisfactionScore,
         'OwnCar': 1 if OwnCar == "Yes" else 0,
         'NumberOfChildrenVisiting': NumberOfChildrenVisiting,
         'MonthlyIncome': MonthlyIncome,
         'TypeofContact': TypeofContact,
         'Occupation': Occupation,
         'Gender': Gender,
-        'MaritalStatus': MaritalStatus,
-        'Designation': Designation,
-        'PitchSatisfactionScore': PitchSatisfactionScore,
-        'NumberOfFollowups': NumberOfFollowups,
         'ProductPitched': ProductPitched,
-        'DurationOfPitch': DurationOfPitch
+        'MaritalStatus': MaritalStatus,
+        'Designation': Designation
 }])
 
 # Set the classification threshold
