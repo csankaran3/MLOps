@@ -103,8 +103,6 @@ classification_threshold = 0.45
 
 # Predict button
 if st.button("Predict"):
-    print(NumberofPersonVisiting)
-    print(pd.DataFrame(input_data))
     prediction_proba = model.predict_proba(input_data)[0, 1]
     prediction = (prediction_proba >= classification_threshold).astype(int)
     result = "Likely to purchase the package" if prediction == 1 else " Unlikely to purchase the package"
