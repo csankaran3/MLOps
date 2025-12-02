@@ -72,7 +72,7 @@ with col4:
         ProductPitched = st.selectbox("ProductPitched", options=["Basic", "Deluxe", "Premium", "Super Deluxe", "King"], index=1)
         DurationOfPitch = st.number_input("Duration of Pitch", min_value=1, max_value=10, value=3)
 
-print(NumberofPersonVisiting)
+
 
 # Convert categorical inputs to match model training
 input_data = pd.DataFrame([{
@@ -96,13 +96,15 @@ input_data = pd.DataFrame([{
         'DurationOfPitch': DurationOfPitch
 }])
 
-print(pd.DataFrame(input_data))
+
 
 # Set the classification threshold
 classification_threshold = 0.45
 
 # Predict button
 if st.button("Predict"):
+    print(NumberofPersonVisiting)
+    print(pd.DataFrame(input_data))
     prediction_proba = model.predict_proba(input_data)[0, 1]
     prediction = (prediction_proba >= classification_threshold).astype(int)
     result = "Likely to purchase the package" if prediction == 1 else " Unlikely to purchase the package"
