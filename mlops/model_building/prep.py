@@ -19,7 +19,7 @@ tourism_dataset.drop('Unnamed: 0', axis=1, inplace=True)
 tourism_dataset.drop('CustomerID', axis=1, inplace=True)
 
 # Fixing the typo error in Gender column
-df["Gender"] = df["Gender"].replace("Fe Male", "Female")
+tourism_dataset["Gender"] = tourism_dataset["Gender"].replace("Fe Male", "Female")
 
 # Define the target variable for the classification task
 target = 'ProdTaken' # Target variable indicating whether the customer has purchased a package (0: No, 1: Yes).
