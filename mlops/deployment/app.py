@@ -51,8 +51,6 @@ with col1:
         NumberOfTrips = st.number_input("Number of Trips", min_value=1, max_value=10, value=1)
         Passport = st.selectbox("Holding Passport?", options=["Yes", "No"], index=0)
         OwnCar = st.selectbox("Owns a Car?", options=["Yes", "No"], index=0)
-        NumberOfChildrenVisiting = st.number_input("Number of Children Visiting", min_value=0, max_value=10, value=0)
-        MonthlyIncome = st.number_input("Monthly Income", min_value=0.0, value=5000.0)
 
 with col2:
         TypeofContact = st.selectbox("TypeofContact", options=["Company Invited", "Self Enquiry"], index=0)
@@ -60,6 +58,8 @@ with col2:
         Gender = st.selectbox("Gender", options=["Male", "Female"], index=1)
         MaritalStatus = st.selectbox("MaritalStatus", options=["Single", "Married", "Unmarried","Divorced"], index=1)
         Designation = st.selectbox("Designation", options=["Executive", "Manager", "Senior Manager", "AVP", "VP"], index=0)
+        NumberOfChildrenVisiting = st.number_input("Number of Children Visiting", min_value=0, max_value=10, value=0)
+        MonthlyIncome = st.number_input("Monthly Income", min_value=0.0, value=5000.0)
 
 st.subheader("Customer Interaction Data")
 col3, col4 = st.columns(2)
@@ -94,6 +94,8 @@ input_data = pd.DataFrame([{
         'ProductPitched': ProductPitched,
         'DurationOfPitch': DurationOfPitch
 }])
+
+print(pd.DataFrame(input_data)
 
 # Set the classification threshold
 classification_threshold = 0.45
