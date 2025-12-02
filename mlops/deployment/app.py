@@ -107,9 +107,8 @@ classification_threshold = 0.45
 
 # Predict button
 if st.button("Predict"):
-    input_data.columns
     input_data
-    prediction = model.predict(input_data)[0]
+    prediction = model.predict_proba(input_data)[0, 1]
     result = "Likely to purchase the package" if prediction == 1 else " Unlikely to purchase the package"
     st.subheader("Prediction Result:")
     st.success(f"Based on the information provided, the customer is {result}.")
