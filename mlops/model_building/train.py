@@ -135,7 +135,7 @@ with mlflow.start_run():
     })
 
     # Save the model locally
-    model_path = "best_churn_model_v2.joblib"
+    model_path = "best_churn_model_v3.joblib"
     joblib.dump(best_model, model_path)
 
     # Log the model artifact
