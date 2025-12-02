@@ -15,8 +15,8 @@ tourism_dataset = pd.read_csv(DATASET_PATH)
 print("Dataset loaded successfully.")
 
 # Dropping unnamed column and customer Id from dataset
-tourism_dataset.drop('Unnamed: 0', axis=1, inplace=True)
-tourism_dataset.drop('CustomerID', axis=1, inplace=True)
+# tourism_dataset.drop('Unnamed: 0', axis=1, inplace=True)
+# tourism_dataset.drop('CustomerID', axis=1, inplace=True)
 
 # Fixing the typo error in Gender column
 tourism_dataset["Gender"].replace("Fe Male", "Female", inplace=True)
