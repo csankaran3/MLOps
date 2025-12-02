@@ -72,6 +72,7 @@ with col4:
         ProductPitched = st.selectbox("ProductPitched", options=["Basic", "Deluxe", "Premium", "Super Deluxe", "King"], index=1)
         DurationOfPitch = st.number_input("Duration of Pitch", min_value=1, max_value=10, value=3)
 
+print(NumberofPersonVisiting)
 
 # Convert categorical inputs to match model training
 input_data = pd.DataFrame([{
