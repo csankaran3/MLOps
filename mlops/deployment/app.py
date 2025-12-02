@@ -72,6 +72,12 @@ with col4:
         ProductPitched = st.selectbox("ProductPitched", options=["Basic", "Deluxe", "Premium", "Super Deluxe", "King"], index=1)
         DurationOfPitch = st.number_input("Duration of Pitch", min_value=1, max_value=10, value=3)
 
+If(CityTier == "Tier 1"):
+    CityTier = 1
+elif(CityTier == "Tier 2"):
+    CityTier = 2
+else:
+    CityTier = 3
 
 # Convert categorical inputs to match model training
 input_data = pd.DataFrame([{
