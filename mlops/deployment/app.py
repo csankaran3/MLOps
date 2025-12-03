@@ -41,7 +41,7 @@ categorical_features = [
 ]
 
 st.subheader("Customer Details")
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 with col1:
         Age = st.number_input("Age (customer's age in years)", min_value=18, max_value=100, value=30)
@@ -49,26 +49,30 @@ with col1:
         NumberOfPersonVisiting = st.number_input("Number of Person Visiting", min_value=1, max_value=10, value=1)
         PreferredPropertyStar = st.number_input("Preferred Property Star", min_value=1, max_value=5, value=3)
         NumberOfTrips = st.number_input("Number of Trips", min_value=1, max_value=10, value=1)
-        Passport = st.selectbox("Holding Passport?", options=["Yes", "No"], index=0)
-        OwnCar = st.selectbox("Owns a Car?", options=["Yes", "No"], index=0)
+        NumberOfChildrenVisiting = st.number_input("Number of Children Visiting", min_value=0, max_value=10, value=0)
 
 with col2:
-        NumberOfChildrenVisiting = st.number_input("Number of Children Visiting", min_value=0, max_value=10, value=0)
-        MonthlyIncome = st.number_input("Monthly Income", min_value=0.0, value=5000.0)
-        TypeofContact = st.selectbox("TypeofContact", options=["Company Invited", "Self Enquiry"], index=0)
+
+        Passport = st.selectbox("Holding Passport?", options=["Yes", "No"], index=0) 
+        OwnCar = st.selectbox("Owns a Car?", options=["Yes", "No"], index=0)
         Occupation = st.selectbox("Occupation", options=["Salaried", "Small Business", "Large Business", "Freelancer"], index=0)
         Gender = st.selectbox("Gender", options=["Male", "Female"], index=1)
         MaritalStatus = st.selectbox("MaritalStatus", options=["Single", "Married", "Unmarried","Divorced"], index=1)
         Designation = st.selectbox("Designation", options=["Executive", "Manager", "Senior Manager", "AVP", "VP"], index=0)
 
-st.subheader("Customer Interaction Data")
-col3, col4 = st.columns(2)
-
 with col3:
+
+        MonthlyIncome = st.number_input("Monthly Income", min_value=0.0, value=5000.0)
+        TypeofContact = st.selectbox("TypeofContact", options=["Company Invited", "Self Enquiry"], index=0)
+
+st.subheader("Customer Interaction Data")
+col4, col5 = st.columns(2)
+
+with col4:
         PitchSatisfactionScore = st.number_input("Pitch Satisfaction Score", min_value=1, max_value=5, value=3)
         NumberOfFollowups = st.number_input("Number of Followups", min_value=0, max_value=10, value=0)
 
-with col4:
+with col5:
         ProductPitched = st.selectbox("ProductPitched", options=["Basic", "Deluxe", "Premium", "Super Deluxe", "King"], index=1)
         DurationOfPitch = st.number_input("Duration of Pitch", min_value=1, max_value=10, value=3)
 
