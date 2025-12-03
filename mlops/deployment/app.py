@@ -49,7 +49,6 @@ with col1:
         NumberOfPersonVisiting = st.number_input("Number of Person Visiting", min_value=1, max_value=10, value=1)
         PreferredPropertyStar = st.number_input("Preferred Property Star", min_value=1, max_value=5, value=3)
         NumberOfTrips = st.number_input("Number of Trips", min_value=1, max_value=10, value=1)
-        NumberOfChildrenVisiting = st.number_input("Number of Children Visiting", min_value=0, max_value=10, value=0)
 
 with col2:
 
@@ -57,13 +56,14 @@ with col2:
         OwnCar = st.selectbox("Owns a Car?", options=["Yes", "No"], index=0)
         Occupation = st.selectbox("Occupation", options=["Salaried", "Small Business", "Large Business", "Freelancer"], index=0)
         Gender = st.selectbox("Gender", options=["Male", "Female"], index=1)
-        MaritalStatus = st.selectbox("MaritalStatus", options=["Single", "Married", "Unmarried","Divorced"], index=1)
-        Designation = st.selectbox("Designation", options=["Executive", "Manager", "Senior Manager", "AVP", "VP"], index=0)
+        NumberOfChildrenVisiting = st.number_input("Number of Children Visiting", min_value=0, max_value=10, value=0)
 
 with col3:
 
         MonthlyIncome = st.number_input("Monthly Income", min_value=0.0, value=5000.0)
         TypeofContact = st.selectbox("TypeofContact", options=["Company Invited", "Self Enquiry"], index=0)
+        MaritalStatus = st.selectbox("MaritalStatus", options=["Single", "Married", "Unmarried","Divorced"], index=1)
+        Designation = st.selectbox("Designation", options=["Executive", "Manager", "Senior Manager", "AVP", "VP"], index=0)
 
 st.subheader("Customer Interaction Data")
 col4, col5 = st.columns(2)
