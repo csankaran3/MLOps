@@ -84,7 +84,7 @@ input_data = pd.DataFrame([{
         'Age': Age,
         'CityTier': CityTier,
         'DurationOfPitch': DurationOfPitch,
-        'NumberofPersonVisiting': NumberOfPersonVisiting,
+        'NumberOfPersonVisiting': NumberOfPersonVisiting,
         'NumberOfFollowups': NumberOfFollowups,
         'PreferredPropertyStar': PreferredPropertyStar,
         'NumberOfTrips': NumberOfTrips,
