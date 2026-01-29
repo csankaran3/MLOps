@@ -9,31 +9,16 @@ on:
 
 jobs:
 
-  register-dataset:
+  register-dependencies:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Install Dependencies
         run: pip install -r mlops/requirements.txt
-
-
-  data-prep:
-    needs: register-dataset
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install Dependencies
-        run: pip install -r mlops/requirements.txt
-      - name: Run Data Preparation
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: python mlops/model_building/prep.py
-
-
 
   deploy-hosting:
     runs-on: ubuntu-latest
-    needs: [model-traning,data-prep,register-dataset]
+    needs: [register-dependencies]
     steps:
       - uses: actions/checkout@v3
       - name: Install Dependencies
